@@ -1,8 +1,8 @@
 import React from 'react';
 import { Test, TestCases } from './TestCases.tsx';
 import { RA } from '../utils/types.ts';
-import { Results } from './Results.tsx';
 import { generateProgram } from '../generator';
+import {Editor} from "./Editor.tsx";
 
 const defaultTestCases: RA<Test> = [
   [2, 4],
@@ -10,9 +10,9 @@ const defaultTestCases: RA<Test> = [
 ];
 
 export function App(): React.ReactElement {
-  const [results, setResults] = React.useState<RA<string>>([]);
+  const [result, setResult] = React.useState<string>('');
   const [testCases, setTestCases] = React.useState<RA<Test>>(defaultTestCases);
-  const [iterations, setIterations] = React.useState(1);
+  const [iterations, setIterations] = React.useState(1000);
   const [lengthLimit, setLengthLimit] = React.useState(100);
   return (
     <>
@@ -21,7 +21,7 @@ export function App(): React.ReactElement {
         className="flex w-fit flex-col gap-2 p-4"
         onSubmit={(event): void => {
           event.preventDefault();
-          setResults(generateProgram(iterations, testCases, lengthLimit));
+          window.requestIdleCallback(()=>setResult(generateProgram(iterations, testCases, lengthLimit)));
         }}
       >
         <TestCases state={[testCases, setTestCases]} />
@@ -37,7 +37,7 @@ export function App(): React.ReactElement {
           />
         </label>
         <label className="flex items-center gap-2">
-          Soft token length limit:
+          Soft token count limit:
           <input
             type="number"
             value={lengthLimit}
@@ -48,12 +48,11 @@ export function App(): React.ReactElement {
           />
         </label>
         <input type="submit" value="Generate" />
-        <p>
-          Double click on the text in [Square Brackets] to trigger the
-          corresponding action
-        </p>
       </form>
-      <Results results={[results, setResults]} />
+         <Editor
+        value={result}
+        onChange={undefined}
+      />
     </>
   );
 }

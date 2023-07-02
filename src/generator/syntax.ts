@@ -1,6 +1,7 @@
 import { IR, RA } from '../utils/types.ts';
 import { pickRandom, pickSquared, random } from './util.ts';
 import { error, replaceItem } from '../utils/utils.ts';
+import variableNames from './variableNames.json';
 
 type GenericToken<KEYS extends string> = KEYS | Term | Command;
 type Declaration<KEYS extends string> = readonly [
@@ -33,9 +34,16 @@ export type Context = {
 const term = (term: string): Term => ({ term });
 
 /* Create an [a-z] array */
-const variableNames = Array.from(Array(26)).map((_, i) =>
-  String.fromCharCode(i + 97)
-);
+// const baseVariableNames = Array.from(Array(26)).map((_, i) =>
+//   String.fromCharCode(i + 97)
+// );
+// const reservedNames = new Set(['do','if','in']);
+// const variableNames = [
+//   ...baseVariableNames,
+//   ...baseVariableNames.flatMap((letter) =>
+//     baseVariableNames.map((letter2) => `${letter}${letter2}`)
+//   ),
+// ].filter(name =>!reservedNames.has(name));
 const minNumber = 0;
 const maxNumber = 20;
 
