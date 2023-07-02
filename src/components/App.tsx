@@ -2,7 +2,7 @@ import React from 'react';
 import { Test, TestCases } from './TestCases.tsx';
 import { RA } from '../utils/types.ts';
 import { generateProgram } from '../generator';
-import {Editor} from "./Editor.tsx";
+import { Editor } from './Editor.tsx';
 
 const defaultTestCases: RA<Test> = [
   [2, 4],
@@ -21,7 +21,9 @@ export function App(): React.ReactElement {
         className="flex w-fit flex-col gap-2 p-4"
         onSubmit={(event): void => {
           event.preventDefault();
-          window.requestIdleCallback(()=>setResult(generateProgram(iterations, testCases, lengthLimit)));
+          window.requestIdleCallback(() =>
+            setResult(generateProgram(iterations, testCases, lengthLimit))
+          );
         }}
       >
         <TestCases state={[testCases, setTestCases]} />
@@ -49,10 +51,10 @@ export function App(): React.ReactElement {
         </label>
         <input type="submit" value="Generate" />
       </form>
-         <Editor
-        value={result}
-        onChange={undefined}
-      />
+      <Editor value={result} onChange={undefined} />
+      <a href="https://github.com/maxxxxxdlp/code-generator/" target="_blank" className="absolute top-0 right-0 p-4">
+        View Source on GitHub
+      </a>
     </>
   );
 }

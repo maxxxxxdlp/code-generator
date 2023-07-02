@@ -58,3 +58,5 @@ weights attached to branches of the tree.
 See `syntaxTree` variable in [./src/generator/syntax.ts](./src/generator/syntax.ts)
 
 No machine learning or fancy AI magic is used - pure randomness (it's about as efficient as [Bogosort](https://en.wikipedia.org/wiki/Bogosort))
+
+See also, my programming language, [alia](https://github.com/maxxxxxdlp/alia) and a [Google Calendar clone](https://github.com/maxxxxxdlp/project-ephemeris).
