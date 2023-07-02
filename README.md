@@ -2,6 +2,8 @@
 
 Randomly generate JavaScript functions, until it accidentally finds a function that passes all specified test cases.
 
+[Live Demo](https://maxxxxxdlp.github.io/code-generator/)
+
 ![Found a solution after 993 iterations](docs/img/1.jpg)
 
 ![Found a solution after 7633 iterations](docs/img/2.jpg)
