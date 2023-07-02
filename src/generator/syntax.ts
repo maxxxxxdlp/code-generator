@@ -123,7 +123,7 @@ export const syntaxTree = createSyntaxTree({
   return: [[1, 0, term('return '), 'existingVariable', term(';\n')]],
   rootStatements: [
     // These numbers don't need to add up to 1
-    [0.9, 0.7, 'statement', term(';\n'), 'statements'],
+    [0.9, 0.7, 'statement', term(';\n'), 'rootStatements'],
     [0.1, 0.3, 'statement', term(';\n')],
   ],
   statements: [
