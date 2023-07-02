@@ -1,6 +1,6 @@
 import { GetSet, RA } from '../utils/types.ts';
 import React from 'react';
-import { removeItem, replaceItem } from '../utils/utils.ts';
+import {parseNumber, removeItem, replaceItem} from '../utils/utils.ts';
 
 export type Test = readonly [input: number, output: number];
 
@@ -23,15 +23,14 @@ export function TestCases({
           <tr key={index}>
             <td>
               <input
-                type="text"
+                type="number"
                 required
                 aria-label="Test"
-                min={-20}
-                max={20}
+                className="w-full"
                 value={input}
                 onChange={({ target: { value: input } }) =>
                   setState(
-                    replaceItem(state, index, [Number.parseInt(input), output])
+                    replaceItem(state, index, [parseNumber(input) ?? 0, output])
                   )
                 }
               />
@@ -41,12 +40,11 @@ export function TestCases({
                 type="number"
                 required
                 aria-label="Result"
-                min={-20}
-                max={20}
+                className="w-full"
                 value={output}
                 onChange={({ target: { value: output } }) =>
                   setState(
-                    replaceItem(state, index, [input, Number.parseInt(output)])
+                    replaceItem(state, index, [input, parseNumber(output) ?? 0])
                   )
                 }
               />

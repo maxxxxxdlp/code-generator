@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+    * {
+        @apply box-border;
+    }
     body {
         @apply m-0;
     }

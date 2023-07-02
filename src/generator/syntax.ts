@@ -14,6 +14,7 @@ type Declaration<KEYS extends string> = readonly [
   ...rest: RA<GenericToken<KEYS>>
 ];
 
+/* A helper for TypeScript typing */
 const createSyntaxTree = <KEYS extends string>(
   tree: Record<KEYS | 'program', RA<Declaration<KEYS>>>
 ): Record<KEYS | 'program', RA<Declaration<KEYS>>> => tree;

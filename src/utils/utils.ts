@@ -46,3 +46,8 @@ export function mappedFind<ITEM, RETURN_TYPE>(
   });
   return value;
 }
+
+export function parseNumber(value: string): number | undefined {
+  const number = Number.parseInt(value);
+  return Number.isNaN(number) ? undefined : number;
+}
