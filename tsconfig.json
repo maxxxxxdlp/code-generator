@@ -1,0 +1,47 @@
+{
+  /* File Inclusion */
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"],
+  "files": ["./lib/declarations.d.ts"],
+  "compilerOptions": {
+    /* Basic Options */
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2021",
+      "esnext"
+    ],
+    "allowImportingTsExtensions": true,
+    "module": "esnext",
+    "noEmit": true,
+    "outDir": "dist",
+    "sourceMap": true,
+    "target": "esnext",
+    "allowJs": true,
+    "checkJs": false,
+    /**/
+    /* Strict Checks */
+    "strict": true,
+    /**/
+    /* Module Resolution */
+    "esModuleInterop": true,
+    "moduleResolution": "bundler",
+    /**/
+    /* Linter Checks */
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    /**/
+    /* Advanced */
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true
+    /* Projects */
+    // REFACTOR: test performance improvements of enabling this:
+    //    "composite": true
+  },
+  "noPropertyAccessFromIndexSignature": true
+}
