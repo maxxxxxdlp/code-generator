@@ -7,12 +7,7 @@
     /* Basic Options */
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es2021",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "es2021", "esnext"],
     "allowImportingTsExtensions": true,
     "module": "esnext",
     "noEmit": true,
