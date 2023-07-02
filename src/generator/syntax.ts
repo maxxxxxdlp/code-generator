@@ -34,17 +34,6 @@ export type Context = {
 
 const term = (term: string): Term => ({ term });
 
-/* Create an [a-z] array */
-// const baseVariableNames = Array.from(Array(26)).map((_, i) =>
-//   String.fromCharCode(i + 97)
-// );
-// const reservedNames = new Set(['do','if','in']);
-// const variableNames = [
-//   ...baseVariableNames,
-//   ...baseVariableNames.flatMap((letter) =>
-//     baseVariableNames.map((letter2) => `${letter}${letter2}`)
-//   ),
-// ].filter(name =>!reservedNames.has(name));
 const minNumber = 0;
 const maxNumber = 20;
 
