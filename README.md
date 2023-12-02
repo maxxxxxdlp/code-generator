@@ -3,7 +3,7 @@
 Randomly generate JavaScript functions, until it accidentally finds a function
 that passes all specified test cases.
 
-[Live Demo](https://maxxxxxdlp.github.io/code-generator/)
+[Live Demo](https://maxpatiiuk.github.io/code-generator/)
 
 ![Found a solution after 993 iterations](docs/img/1.jpg)
 
@@ -16,7 +16,7 @@ that passes all specified test cases.
 Clone the repository:
 
 ```sh
-git clone https://github.com/maxxxxxdlp/code-generator
+git clone https://github.com/maxpatiiuk/code-generator
 cd code-generator
 ```
 
@@ -59,4 +59,4 @@ See `syntaxTree` variable in [./src/generator/syntax.ts](./src/generator/syntax.
 
 No machine learning or fancy AI magic is used - pure randomness (it's about as efficient as [Bogosort](https://en.wikipedia.org/wiki/Bogosort))
 
-See also, my programming language, [alia](https://github.com/maxxxxxdlp/alia) and a [Google Calendar clone](https://github.com/maxxxxxdlp/project-ephemeris).
+See also, my programming language, [alia](https://github.com/maxpatiiuk/alia) and a [Google Calendar clone](https://github.com/maxpatiiuk/project-ephemeris).

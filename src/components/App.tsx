@@ -52,7 +52,7 @@ export function App(): React.ReactElement {
         <input type="submit" value="Generate" />
       </form>
       <Editor value={result} onChange={undefined} />
-      <a href="https://github.com/maxxxxxdlp/code-generator/" target="_blank" className="absolute top-0 right-0 p-4">
+      <a href="https://github.com/maxpatiiuk/code-generator/" target="_blank" className="absolute top-0 right-0 p-4">
         View Source on GitHub
       </a>
     </>
